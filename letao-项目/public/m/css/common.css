@@ -1,0 +1,106 @@
+/*通用的css*/
+
+.ct_container{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ct_header {width: 100%;
+    height: 45px;
+    background: #006699;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    line-height: 45px;
+    text-align: center;
+
+}
+.ct_header h3{
+    font-size: 16px;
+    line-height: 45px;
+    margin: 0;
+    font-weight: normal;
+}
+
+
+.ct_header .left{
+
+    left: 0;
+
+}
+
+.ct_header .right{
+
+    right: 0;
+
+}
+.ct_header a{
+    top: 0;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+}
+
+.ct_header a span{
+    color: #fff;}
+
+
+
+.ct_content{
+    padding: 45px 0 55px 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.ct_content .ct_wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.ct_footer{
+    width: 100%;
+    height: 55px;
+    background: #006699;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.ct_footer a{
+    color: #fff;
+    float: left;
+    text-align: center;
+    width: 25%;
+    height: 55px;
+    padding-top: 6px;
+
+}
+.ct_footer a span{
+    display: block;
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+.ct_footer a.now{
+    color: orange;
+
+}
+
+body{
+    background: #fff;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+

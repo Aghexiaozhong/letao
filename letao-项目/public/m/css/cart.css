@@ -1,0 +1,151 @@
+#cart .mui-media-object{
+    width: 60px;
+    max-width: 60px;
+    line-height: 60px;
+    height: 60px;
+}
+#cart .mui-table-view-cell{
+    padding-right: 25px;
+}
+#cart .mui-table-view-cell>.mui-slider-handle .mui-navigate-right:after{
+    right: -20px;
+}
+#cart .proName{
+    color: #333;
+}
+#cart .proPrice{
+    position: relative;
+}
+#cart .proPrice .now{
+    color: red;
+}
+#cart .proPrice .old{
+    color: #666;
+    text-decoration: line-through;
+}
+#cart .proPrice .num{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#cart input{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+/*交易*/
+.lt_trade{
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 55px;
+    border-top: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ff3300;
+    line-height: 30px;
+}
+.lt_trade span{}
+.lt_trade a{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background: #ff3300;
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+
+
+.lt_pro_Size span{
+    padding: 3px 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    display: inline-block;
+    /*float: left;*/
+
+}
+.lt_pro_Size span.now{
+    background: #fa0;
+}
+
+
+.lt_pro_Num span{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    /*float: left;*/
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+.lt_pro_Num input{
+    width: 30px;
+    padding: 2px 0 0 0;
+    height: 30px;
+    line-height: 30px;
+    border:none;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #ccc;
+    text-align: center;
+    border-radius: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    box-sizing: border-box;
+
+
+
+
+}
+
+/*侧滑点击编辑之后的样式*/
+
+.update-cart{
+    margin: 5px 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    display: block;
+
+    color: #000;
+
+    border-radius: 13px;
+    width: 240px;
+    height: 112px;
+
+
+
+}
+
+.update-cart .lt_pro_Size{
+    width: 100%;
+    height: 72px;
+    text-align: left;
+    vertical-align: middle;
+    overflow: scroll;
+
+}
+
+
+.mui-popup-text .lt_pro_Num{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    vertical-align: middle;
+    position: relative;
+
+
+}
+.mui-popup-text .lt_pro_Num .jian{
+    margin-right: -4px;
+}
+
+.mui-popup-text .lt_pro_Num .jia{
+    margin-left: -4px;
+}

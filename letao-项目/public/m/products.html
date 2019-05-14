@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ios是否允许创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios顶部通知的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不让转成电话号码格式-->
+    <meta content="telephone=no" name="format-detection">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/product.css">
+    <title>小钟乐淘商品详情</title>
+</head>
+<body>
+<!--首页内容-->
+<div class="ct_container">
+    <header class="ct_header">
+        <a href="javascript:history.back();" class="left"> <span class="fa fa-arrow-left"></span></a>
+        <h3>商品详情</h3>
+        <a href="index.html" class="right"> <span class="fa fa-home"></span></a>
+    </header>
+    <div class="ct_content">
+        <div class="ct_wrapper">
+            <!--滑动区域-->
+            <div class="mui-scroll-wrapper">
+                <!--动态加载商品详情页下的数据-->
+                <div class="mui-scroll">
+                    <!--TODO-->
+                    <span class="mui-icon mui-icon-spinner mui-spin mui-icon"></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p_option">
+        <a href="./user/cart.html" class="btn_cart fa fa-shopping-cart"></a>
+        <a href="javascript:;" class="btn_addCart">加入购物车</a>
+        <a href="javascript:;" class="btn_pay">立即购买</a>
+    </div>
+</div>
+
+<script type="text/template" id="detail">
+    <%
+
+    if(!pic || !pic.length){
+        pic = [{
+            picAddr:'./images/none01.jpg'
+
+        }];
+    }%>
+
+<div class="mui-slider">
+    <div class="mui-slider-group mui-slider-loop">
+
+        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="<%=pic[pic.length-1].picAddr%>" /></a>
+        </div>
+        <% for(var i = 0; i < pic.length; i++){ %>
+        <div class="mui-slider-item"><a href="#"><img src="<%=pic[i].picAddr%>" /></a></div>
+        <% }%>
+
+
+
+        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="<%=pic[0].picAddr%>" /></a></div>
+    </div>
+
+    <div class="mui-slider-indicator">
+
+        <% for(var i = 0; i < pic.length; i++){ %>
+        <div class="mui-indicator <%=i==0? 'mui-active':''%>"></div>
+
+        <% } %>
+
+
+    </div>
+</div>
+
+<div class="p_title">
+    <%=picName%>
+</div>
+
+<div class="p_price">
+    价格: <strong class="present">&yen;<%=price%></strong>
+    <del class="original">&yen;<%=oldPrice%></del>
+</div>
+
+<div class="p_size">
+    尺码:
+    <% var sizeArr = size.split('-');%>
+    <% for(var i = sizeArr[0]; i <= sizeArr[1]; i++){ %>
+    <span class="btn_size"><%=i%></span>
+    <%}%>
+
+</div>
+
+<div class="p_number">
+    数量: <span class="jian">-</span>
+    <input type="text" readonly value="0" data-max="<%=num%>">
+    <span class="jia">+</span>
+    剩余:<%=num%>件
+</div>
+</script>
+
+<script src=""></script>
+<script src="assets/mui/js/mui.min.js"></script>
+<script src="assets/zepto/zepto.min.js"></script>
+<script src="assets/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>
